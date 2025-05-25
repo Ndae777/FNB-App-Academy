@@ -1,0 +1,33 @@
+.gallery img{
+    width: 100%;
+}
+
+p{
+    font-weight: bold;
+}
+
+h4{
+    color:aqua;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+.menu-bar {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    height: 40px;
+    background-color: aqua;
+    justify-content: center;
+    
+}
+
+.menu-bar a {
+    
+    text-decoration: none;
+    padding-left: 25px;
+}
+
+.menu-bar a:hover{
+    color: brown;
+}
