@@ -76,3 +76,28 @@ body{
     color: white;
     text-align : center;
 }
+
+/* styling animals page*/
+
+.main{
+    margin-top: 119px;
+    background: url('images/images/map-blur.png');
+    background-repeat: repeat-y;
+}
+
+.content{
+    padding-top: 1px;
+    padding-bottom: 50px;
+}
+
+/* info box, any hyperlink with infobox = a.infobox */
+a.info-box{
+      text-decoration : none;
+      background      : rgba(223, 221, 210, 0.8);
+      width           : 90%;
+      height          : 90px;
+      display         : block;
+      margin          : auto;
+      margin-top      : 12px;
+      padding         : 1px; 
+}
