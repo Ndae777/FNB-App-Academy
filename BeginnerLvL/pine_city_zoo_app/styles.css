@@ -101,3 +101,31 @@ a.info-box{
       margin-top      : 12px;
       padding         : 1px; 
 }
+
+.info-box img{
+    height: 70px;
+    margin: 10px;
+    float: left;
+}
+
+.info-box h3{
+    padding: 0;
+    margin-bottom: 0;
+    width: 90%;
+    color: brown;
+
+}
+
+.info-box p{
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    color: black;
+}
+
+/* any image with right class = img.right */
+.info-box img.right{
+    float : right;
+    margin-top: 25px;
+    height: 40px;
+}
