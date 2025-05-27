@@ -100,6 +100,7 @@ a.info-box{
       margin          : auto;
       margin-top      : 12px;
       padding         : 1px; 
+      border-radius: 10px;
 }
 
 .info-box img{
@@ -128,4 +129,21 @@ a.info-box{
     float : right;
     margin-top: 25px;
     height: 40px;
+}
+
+/* info box full , for animal pages */
+
+.info-box-full{
+    background-color: rgba(223, 221, 210, 0.8);
+    width: 90%;
+    display: block;
+    margin: auto;
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 7px;
+
+}
+
+.info-box-full img{
+    width: 100%;
 }
