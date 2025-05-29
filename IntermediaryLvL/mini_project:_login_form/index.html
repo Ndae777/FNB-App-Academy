@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+
+    <p >Welcome. Please log in.</p>
+
+    <form>
+        <label for="username">Username:</label><input type="text" class="inputUserName">
+        <br>
+        <label for="password">Password:</label> <input type="password" class="inputPassword">
+        <br>
+        <p class="loginResult" >Login Status.</p>
+        <a href="#" onclick="event.preventDefault(); LogIn();" >Enter.</a>
+    </form>
+
+    <script>
+        let realUserName = 'Ndaedzo';
+        let realPassword = '12345';
+
+        function LogIn(){
+            let inputUserName = document.getElementsByClassName("inputUserName")[0].value;
+            let inputPassword = document.getElementsByClassName("inputPassword")[0].value;
+
+            if(inputUserName == realUserName && inputPassword == realPassword){
+                document.getElementsByClassName('loginResult')[0].innerHTML = "Correct. Login successful"    
+            }
+            else{
+                document.getElementsByClassName('loginResult')[0].innerHTML= "Login Failed."
+            }
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
