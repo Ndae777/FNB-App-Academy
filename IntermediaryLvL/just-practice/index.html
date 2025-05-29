@@ -25,6 +25,21 @@
     <p id="paragraph2" onclick="changeText()">Check this 2</p>
     <p id="paragraph3"></p>
 
+    <!-- options with switch cases -->
+
+    <br>
+
+    <label for="weather">What's the weather like?</label>
+    <select id="weather">
+        <option value="sunny">sunny</option>
+        <option value="windy">windy</option>
+        <option value="rainy">rainy</option>
+        <option value="snowy">snowy</option>
+        <option value="cloudy">cloudy</option>
+
+    </select>
+    <a href="#" onclick="btnPressed()">GO!</a>
+    <p id="outputText">Weather advice: </p>
 
     <script>
             //variables
@@ -57,18 +72,56 @@
 
             //functions
 
-            function changeText(){
-                if(document.getElementById("paragraph2").innerHTML=='Check this 2')
-                    { 
-                        document.getElementById("paragraph2").innerHTML= 'You did it , it was this.innerHTML inside an if conditional'
-                    }
-                    else
-                    {   
-                       document.getElementById("paragraph2").innerHTML='Check this 2'
-                    }   
-            }
-    
+            // function changeText(){
+            //     if(document.getElementById("paragraph2").innerHTML=='Check this 2')
+            //         { 
+            //             document.getElementById("paragraph2").innerHTML= 'You did it , it was this.innerHTML inside an if conditional'
+            //         }
+            //         else
+            //         {   
+            //            document.getElementById("paragraph2").innerHTML='Check this 2'
+            //         }   
+            // }
 
+
+        function btnPressed(){
+            var weatherSelected = document.getElementById("weather").value;
+            var advice;
+            switch (weatherSelected){
+                case ("sunny"):
+                    advice = "Wear hats.";
+                    break;
+                case ("windy"):
+                    advice = "Wear a jacket.";
+                    break;
+                case ("rainy"):
+                    advice = "Wear a raincoat.";
+                    break;
+                case ("snowy"):
+                    advice = "Wear warm clothes.";
+                    break;
+                case ("cloudy"):
+                    advice = "Wear things bro.";
+                    break;
+                default:
+                    advice = "Nothing bro";
+
+                
+            }
+            document.getElementById("outputText").innerHTML = `Weather advice, ${advice}`;
+        }
+
+        //converting text to number
+
+        var text1 = "10";
+        numb1 = parseInt(text1);
+        document.getElementById("paragrph2").innerHTML = numb1;
+
+        //NaN situation is possible 
+
+        if(isNaN(numb1)){
+            document.getElementById("paragrph2").innerHTML = "This is not a number";
+        }
     </script>
 </body>
 </html>
