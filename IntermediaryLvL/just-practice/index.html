@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Javasscript</title>
+</head>
+<body>
+    
+    <h1 id="heading1">JavaScript</h1>
+
+    <!-- you can embed javascript in elements. -->
+    <p id="paragraph1" 
+    onclick="if(this.innerHTML=='Check this')
+    { 
+        this.innerHTML= 'You did it , it was this.innerHTML inside an if conditional'
+    }
+    else
+    {
+        this.innerHTML='Check this'
+    }">Check this</p>
+
+        <!-- vs calling a function -->
+    <br>
+    <p id="paragraph2" onclick="changeText()">Check this 2</p>
+    <p id="paragraph3"></p>
+
+
+    <script>
+            //variables
+    //    var text1;
+    //    var text2;
+    //    var text3 = ", JS is awsome."
+
+    //    text1 = "This is Javascript";
+    //    text2 ="Declare varibles by let, const and var";
+
+            //output
+    //    document.getElementById("heading1").innerHTML = (text1+text3);
+    //    document.getElementById("paragraph1").innerHTML=("Use document.getElementById(/idName/).innerHTML=('Your prefered replacement')");
+
+    //    var numA = 7;
+    //    var numB = 70;
+
+    //    document.getElementById("paragraph2").innerHTML=(`7 x 70 = ${numA*numB}`);
+
+            //conditionals
+    // let passwaord = "007";
+    
+    // let actualPassword = "007";
+
+    // if(passwaord == actualPassword){
+    //     document.getElementById("paragraph1").innerHTML=("Access Granted");
+    // }else{
+    //      document.getElementById("paragraph1").innerHTML=("Nah Buddy , nah.");
+    // }
+
+            //functions
+
+            function changeText(){
+                if(document.getElementById("paragraph2").innerHTML=='Check this 2')
+                    { 
+                        document.getElementById("paragraph2").innerHTML= 'You did it , it was this.innerHTML inside an if conditional'
+                    }
+                    else
+                    {   
+                       document.getElementById("paragraph2").innerHTML='Check this 2'
+                    }   
+            }
+    
+
+    </script>
+</body>
+</html>
