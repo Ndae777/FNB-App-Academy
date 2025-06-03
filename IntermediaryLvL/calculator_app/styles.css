@@ -1,0 +1,41 @@
+table{
+    color: white;
+    text-align: center;
+    border-collapse: collapse;
+    font: normal ;
+    font-size: 2em;
+}
+
+tr{
+    height: 16.4vh;
+    background-color: gray;
+}
+
+td{
+    width: 25vw ;
+    border: 1px solid darkgray;
+
+}
+
+#input{
+    background-color: gray;
+    text-align: right;
+    width: 90%;
+    border: 0px;
+    font-size:  2em;
+    color: white;
+}
+
+.digitBtn{
+    background-color: greenyellow;
+
+}
+
+.operatorBtn{
+    background-color: green;
+
+}
+
+.ACBtn{
+    background-color: lime;
+}
