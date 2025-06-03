@@ -10,7 +10,7 @@
 
     <!-- outline for the calculator -->
 
-    <table border="1">
+    <table border="4">
         <tr>
             <td colspan="4">
                 <input type="text" id="input" value="0">
@@ -19,44 +19,92 @@
         </tr>
             
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>X</td>
+            <td onclick="digitBtnPressed(1)">1</td>
+            <td onclick="digitBtnPressed(2)">2</td>
+            <td onclick="digitBtnPressed(3)">3</td>
+            <td onclick="operatorBtnPressed('X')">X</td>
             
         </tr>
 
         <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>/</td>
+            <td onclick="digitBtnPressed(4)">4</td>
+            <td onclick="digitBtnPressed(5)">5</td>
+            <td onclick="digitBtnPressed(6)">6</td>
+            <td onclick="operatorBtnPressed('/')">/</td>
             
         </tr>
 
         <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>+</td>
+            <td onclick="digitBtnPressed(7)">7</td>
+            <td onclick="digitBtnPressed(8)">8</td>
+            <td onclick="digitBtnPressed(9)">9</td>
+            <td onclick="operatorBtnPressed('+')">+</td>
             
         </tr>
         <tr>
           
-            <td colspan="2">0</td>
-            <td>AC</td>
-            <td>-</td>
+            <td colspan="2" onclick="digitBtnPressed(0)">0</td>
+            <td onclick="btnACPressed()">AC</td>
+            <td onclick="operatorBtnPressed('-')">-</td>
             
         </tr>
          <tr>
           
-            <td colspan="4">#</td>
+            <td colspan="4" id="output" onclick="equalsBtnPressed()">=</td>
         </tr>
 
     </table>
 
 
     <script>
+        var newLine = true;
+        var value1,currentOperator;
+
+        function digitBtnPressed(button){
+            if(newLine == true){
+                document.getElementById("input").value = button;
+                newLine = false;
+            }else{
+                var currentValue = document.getElementById("input").value;
+                document.getElementById("input").value = currentValue + button;
+            }
+        }
+
+        //event handler to clear user input .
+
+        function btnACPressed(){
+            document.getElementById("input").value = 0;
+            newLine=true;
+        }
+
+        function operatorBtnPressed(operator){
+            currentOperator = operator;
+            value1 = document.getElementById("input").value;
+            value1= parseInt(value1);
+            newLine = true;
+        }
+
+        function equalsBtnPressed(){
+            var value2 = parseInt(document.getElementById("input").value);
+            var total;
+            switch (currentOperator){
+                case "+":
+                    total = value1 + value2;
+                    break;
+                case "-":
+                    total = value1 - value2;
+                    break;
+                case "/":
+                    total = value1 / value2;
+                    break;
+                case "X":
+                    total = value1 * value2;
+                    break;
+            }
+
+            document.getElementById("input").value = total;
+            
+        }
 
     </script>
     
