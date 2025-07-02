@@ -12,6 +12,8 @@
         <button id="addContact" type="button">Add contact</button>
     <script src="config.js"></script>
     <script>
+
+        document.getElementById("refresh").addEventListener('click', fetchContacts);
         function fetchContacts(){
             fetch(rootPath + "controller/get-contacts/")
             .then(function(response){
@@ -28,7 +30,7 @@
             for(a in data){
                 output +=`
                     <tr>
-                        <td><img src="${rootPath}controller/uploads/${data[a].avatar}" width="40"><td>
+                        <td><img src="${rootPath}controller/uploads/${data[a].avatar}" width="40px" ><td>
                         <td><h5>${data[a].firstname}</h5></td>
                         <td><h5>${data[a].lastname}</h5></td>
                     </tr>
