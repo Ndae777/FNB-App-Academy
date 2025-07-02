@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact App</title>
 </head>
@@ -12,13 +13,26 @@
     <script src="config.js"></script>
     <script>
         function fetchContacts(){
-            fetch(rootpath + "controller/get-contacts/")
+            fetch(rootPath + "controller/get-contacts/")
             .then(function(response){
                 return response.json()
             })
             .then(function(data){
                 displayOutput(data);
             })
+        }
+
+        function displayOutput(data){
+            var output = "<table>";
+            
+            for(a in data){
+                output +=`
+                    <tr>
+                        <td><img src="${rootPath}controller/uploads/${data[a].avatar}"><td>
+                    </tr>
+                `
+            }
+
         }
 
     </script>
