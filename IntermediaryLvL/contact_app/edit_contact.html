@@ -35,6 +35,7 @@
     <script src="config.js"></script>
     <script>
         document.getElementById("homeLink").addEventListener('click', homeLink);
+        document.getElementById('editContact').addEventListener('click', editContact)
 
         var id = getID();
 
@@ -69,6 +70,15 @@
             document.getElementById("mobile").value = data[0].mobile;
             document.getElementById("email").value  = data[0].email;
 
+        }
+
+        function editContact(){
+            document.getElementById("firstname").readOnly = false;
+            document.getElementById("lastname").readOnly = false;
+            document.getElementById("mobile").readOnly = false;
+            document.getElementById("email").readOnly = false;
+            document.getElementById("avatar").hidden = false;
+            document.getElementById("submitForm").hidden = false;
         }
 
     </script>
