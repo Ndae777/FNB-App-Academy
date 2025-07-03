@@ -35,6 +35,15 @@
     <script src="config.js"></script>
     <script>
 
+        var id = getID();
+
+        function getID(){
+            var url=window.location.href;
+            var pos = url.search("=");
+            var id= url.slice(pos+1);
+            return id; 
+        }
+
     </script>
 </body>
 </html>
